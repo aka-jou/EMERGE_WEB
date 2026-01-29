@@ -47,7 +47,7 @@ export default function ProjectOaxaca() {
       },
       {
         title: "Servicio de Reacondicionamiento de Convertidor",
-        description: "2025: Servicio técnico especializado en campo 'Reacondicionamiento de convertidor de potencias CAL'",
+        description: "2025: Servicio técnico especializado en campo 'Reacondicionamiento de convertidor de potencias DAC",
         icon: "tool"
       },
       {

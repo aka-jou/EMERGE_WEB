@@ -2,8 +2,8 @@ import { BookOpenText, Wrench, Zap, Package } from "lucide-react";
 import type { Service } from "../../components/landing/types";
 import cale from "../../assets/cale.png";
 import consu from "../../assets/consu.png";
-import servi from "../../assets/servi.png";
-import atmt from "../../assets/atmt.jpg";
+import atmtt from "../../assets/atmtt.png";
+import preve1 from "../../assets/preve1.png";
 
 export const SERVICES: Service[] = [
   {
@@ -26,7 +26,7 @@ export const SERVICES: Service[] = [
     subtitle: "Mantenimiento y diagnóstico especializado",
     icon: Wrench,
     image:
-      servi,
+      preve1,
     items: [
       "Videoscopia en multiplicadoras",
       "Pruebas estáticas en generadores",
@@ -43,7 +43,7 @@ export const SERVICES: Service[] = [
     subtitle: "Subestaciones y líneas de transmisión",
     icon: Zap,
     image:
-      atmt,
+      atmtt,
     items: [
       "Pruebas eléctricas a equipos primarios",
       "Líneas de transmisión en alta, media y baja tensión",

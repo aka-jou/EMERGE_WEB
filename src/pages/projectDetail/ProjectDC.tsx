@@ -19,7 +19,7 @@ export default function ProjectCuba() {
       location: "Olguín, Cuba",
       technology: "Aerogeneradores Gamesa G52",
       serviceType: "Asistencia técnica especializada",
-      scope: "Troubleshooting, suministro de refacciones, sustitución de materiales de palas, correctivas planificadas, eléctrico y mecánico",
+      scope: "Troubleshooting, suministro de refacciones, correctivas planificadas, eléctrico y mecánico",
       whyUsPoints: [
         "Experiencia comprobada en aerogeneradores Gamesa y Vestas",
         "Equipo multidisciplinario con especialistas eléctricos, mecánicos y de campo",

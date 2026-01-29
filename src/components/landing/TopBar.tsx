@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin} from "lucide-react";
 
 export default function TopBar() {
   return (
@@ -19,17 +19,7 @@ export default function TopBar() {
               <span>Mexicali Baja California</span>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Facebook className="w-3.5 h-3.5" />
-            </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Instagram className="w-3.5 h-3.5" />
-            </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Linkedin className="w-3.5 h-3.5" />
-            </a>
-          </div>
+
         </div>
       </div>
     </div>

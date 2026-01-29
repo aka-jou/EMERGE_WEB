@@ -21,7 +21,7 @@ export default function ProjectBajaCalifa() {
       serviceType: "Asistencia técnica y mantenimiento eólico",
       scope: "Troubleshooting, suministro de refacciones, sustitución de palas, tareas planificadas",
       whyUsPoints: [
-        "Experiencia comprobada en aerogeneradores Gamesa y Vestas",
+        "Experiencia comprobada en aerogeneradores Gamesa",
         "Equipo multidisciplinario con especialistas eléctricos, mecánicos y de campo",
         "Capacidad de operar fuera de México manteniendo estándares de seguridad",
         "Enfoque EHS en todas las intervenciones técnicas"
@@ -31,7 +31,7 @@ export default function ProjectBajaCalifa() {
     challenges: [
       "Fallas críticas en el convertidor del aerogenerador que afectaban la operación continua",
       "Necesidad urgente de refacciones eléctricas y electrónicas especializadas en ubicación remota",
-      "Sustitución y mantenimiento preventivo y correctivo de convertidores"
+      "Mantenimiento preventivo y correctivo de convertidores dtc"
     ],
     
     services: [

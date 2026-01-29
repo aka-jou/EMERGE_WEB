@@ -144,7 +144,7 @@ export default function ClientsSection() {
 
         <div className="mt-16 text-center">
           <Link to="/colaboradores" className="bg-[#005900] hover:bg-green-800 text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-green-900/30 transition-all duration-300 transform hover:-translate-y-1">
-            Ver Todos los Clientes Potenciales
+            Colaboraciones estratégicas
           </Link>
         </div>
       </div>
