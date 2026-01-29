@@ -7,7 +7,7 @@ function ObjectiveCard({ item }: { item: Objective }) {
   return (
     <div className="group bg-[#f9fafb] border border-[#005900] rounded-xl p-5 hover:shadow-md transition-all duration-300 flex flex-col items-start gap-3">
       <div className="flex items-center gap-3 w-full">
-        <h3 className="font-bold text-[#005900] text-lg">{item.title}</h3>º
+        <h3 className="font-bold text-[#005900] text-lg">{item.title}</h3>
       </div>
       <p className="text-gray-500 text-sm leading-relaxed text-left">{item.description}</p>
     </div>
