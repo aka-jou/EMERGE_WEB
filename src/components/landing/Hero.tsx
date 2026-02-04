@@ -55,10 +55,12 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <button className="flex items-center justify-center gap-3 bg-[rgba(0,89,0,0.5)] border border-[rgba(229,231,235,0.2)] text-white px-8 py-4 rounded-lg hover:bg-[rgba(0,89,0,0.7)] transition-colors">
-              <Search className="w-4 h-4" />
+            
+
+            <Link to="/store" className="flex items-center justify-center gap-3 bg-[rgba(0,89,0,0.5)] border border-[rgba(229,231,235,0.2)] text-white px-8 py-4 rounded-lg hover:bg-[rgba(0,89,0,0.7)] transition-colors">
+            <Search className="w-4 h-4" />
               <span>Cotiza</span>
-            </button>
+            </Link>
 
             <Link
               to="/projects"

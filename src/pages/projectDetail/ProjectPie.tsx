@@ -5,23 +5,24 @@ import ServicesGrid from '../../components/caseDetail/ServiceGrid';
 import ProjectBenefits from '../../components/caseDetail/ProjectBenefits';
 import Navbar from '../../components/landing/NavBar';
 import TopBar from '../../components/landing/TopBar';
-import bajacalifa from '../../assets/bajacalifa.png'; // Cambia por la imagen correcta
+import piedralarga from '../../assets/piedralarga.png'; // Cambia por la imagen correcta
 
-export default function ProjectBajaCalifa() {
+
+export default function ProjectPiedraLarga() {
   const projectData = {
-    title: "Asset Management G8X Baja California, México",
-    description: "Soporte especializado para aerogeneradores Gamesa G8X con diagnóstico, refacciones y mantenimiento planificado.",
-    publishDate: "22 de abril de 2025",
-    author: "Carlos Vidal",
-    image: bajacalifa,
+    title: "Troubleshooting Piedra Larga I G8X Oaxaca, México",
+    description: "Soporte especializado para aerogeneradores Gamesa G80 con diagnóstico, refacciones y mantenimiento planificado.",
+    publishDate: "24 de abril de 2025",
+    author: "Wilbert Ibarra",
+    image: piedralarga,
     
     sidebar: {
-      location: "Baja California",
+      location: "Oaxaca, Istmo",
       technology: "Aerogeneradores Gamesa G8X",
       serviceType: "Asistencia técnica y mantenimiento eólico",
-      scope: "Troubleshooting, suministro de refacciones, sustitución de palas, tareas planificadas",
+      scope: "Troubleshooting, suministro de refacciones y tareas y tareas planificadas",
       whyUsPoints: [
-        "Experiencia comprobada en aerogeneradores Gamesa",
+        "Experiencia comprobada en aerogeneradores Gamesa y Vestas",
         "Equipo multidisciplinario con especialistas eléctricos, mecánicos y de campo",
         "Capacidad de operar fuera de México manteniendo estándares de seguridad",
         "Enfoque EHS en todas las intervenciones técnicas"
@@ -31,38 +32,28 @@ export default function ProjectBajaCalifa() {
     challenges: [
       "Fallas críticas en el convertidor del aerogenerador que afectaban la operación continua",
       "Necesidad urgente de refacciones eléctricas y electrónicas especializadas en ubicación remota",
-      "Mantenimiento preventivo y correctivo de convertidores dtc"
+      "Sustitución y mantenimiento de componentes de palas, damper de nacelle y puerta polbos"
     ],
     
     services: [
       {
-        title: "Asistencia en la Gestión de Recursos",
-        description: "Diciembre 2024-2025. Asesoramiento en disponibilidad, mantenimiento preventivo y correctivos",
+        title: "Troubleshooting PLI",
+        description: "Octubre-2024. Asistencia Técnica Especializada para solución de averías en aerogeneradores marca Gamesa modelo G80",
         icon: "search"
       },
       {
-        title: "Mantenimiento de Palas",
-        description: "Septiembre 2024. Trabajos especializados de palas de aerogeneradores de 2 MW",
-        icon: "tool"
-      },
-      {
-        title: "Suministro de Repuestos",
-        description: "Agosto 2024-2025. Suministro de refacciones eléctricas y electrónicas especializadas",
-        icon: "package"
-      },
-      {
         title: "Reparación de Motores",
-        description: "Septiembre 2024. Servicios de reparación de motores de frecuencia",
-        icon: "wind"
+        description: "Noviembre-2024. Servicio de reparación de motores en taller",
+        icon: "tool"
       },
       {
         title: "Reacondicionamiento de Convertidor",
-        description: "Mayo 2024-2025. Servicio Técnico especializado en campo. Reacondicionamiento de convertidor de potencia de aerogenerador ETC",
-        icon: "tool"
+        description: "Diciembre-2024. Reacondicionamiento de Convertidor de Potencia de aerogeneradores DTC.",
+        icon: "package"
       },
       {
-        title: "Reacondicionamiento de Generador Canvey",
-        description: "Marzo 2024. Servicio de diagnóstico y reparación del generador",
+        title: "Troubleshooting PLI y PLII",
+        description: "Enero-2025. Servicio de Asistencia técnica especializada para solución de averías en aerogeneradores marca Gamesa G80.",
         icon: "wind"
       }
     ],
@@ -75,6 +66,7 @@ export default function ProjectBajaCalifa() {
       "Optimización del rendimiento energético y retorno de inversión del parque eólico"
     ]
   };
+
 
   return (
     <div className="bg-white min-h-screen">
@@ -91,6 +83,7 @@ export default function ProjectBajaCalifa() {
           image={projectData.image}
         />
 
+
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
           {/* Main Content - 2 columns */}
@@ -99,6 +92,7 @@ export default function ProjectBajaCalifa() {
             <ServicesGrid services={projectData.services} />
             <ProjectBenefits benefits={projectData.benefits} />
           </div>
+
 
           {/* Sidebar - 1 column */}
           <div className="lg:col-span-1">

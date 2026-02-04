@@ -1,8 +1,112 @@
 import { useState } from "react";
 import { Search, X } from "lucide-react";
 
+import jama from "../../../assets/jama.png";
+
+import oaxacaim from "../../../assets/oaxacaim.png";
+import bajacalifa from "../../../assets/bajacalifa.png";
+import cuba from "../../../assets/cuba.png";
+import chiapas from "../../../assets/chiapas.png";
+import merida from "../../../assets/merida.png";
+import oaxxx from "../../../assets/oaxxx.png";
+import republica from "../../../assets/republica.png";
+import oaxx from "../../../assets/oaxx.png";
 import CaseCard from "./CaseCard";
-import { CASES } from "../../../data/cases";
+
+
+export const CASES = [
+  {
+    id: "1", 
+    title: "Asistencia Técnica Especializada G8X Newport, Jamaica",
+    type: "Preventivo",
+    date: "15 Ene 2025",
+    location: "Jamaica",
+    duration: "3 meses",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: jama,
+  },
+  {
+    id: "2", 
+    title: "Contrato Marco de Asistencia Técnica Especializada, Oaxaca",
+    type: "Preventivo",
+    date: "15 Ene 2025", 
+    location: "Oaxaca",
+    duration: "3 meses",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: oaxacaim,
+  },
+  {
+    id: "3", 
+    title: "Asset Management G8X, Baja California, México ",
+    type: "Preventivo",
+    date: "15 Ene 2025",
+    location: "Tecate Rumorosa",
+    duration: "2 años",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: bajacalifa,
+  },
+  {
+    id: "4",
+    title: "Asistencia Técnica Especializada G52",
+    type: "Preventivo/Correctivo",
+    date: "15 Ene 2025",
+    location: "Cuba",
+    duration: "2 meses",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: cuba,
+  },
+  // --- LOS 5 NUEVOS CASOS AGREGADOS ---
+  {
+    id: "5",
+    title: "Asistencia Técnica Especializada G8X Chiapas, México",
+    type: "Calidad",
+    date: "15 Ene 2025",
+    location: "Arriaga",
+    duration: "3 meses",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: chiapas,
+  },
+  {
+    id: "6",
+    title: "Servicio Técnico Especializado Mérida, México",
+    type: "Apoyo a mantenimiento",
+    date: "15 Ene 2025",
+    location: "Mérida, Yucatán",
+    duration: "1 mes",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: merida,
+  },
+  {
+    id: "7",
+    title: "Troubleshooting G8X Oaxaca, México",
+    type: "Troubleshooting",
+    date: "15 Ene 2025",
+    location: "Unión Hidalgo, Oaxaca",
+    duration: "10 meses",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: oaxx,
+  },
+  {
+    id: "8",
+    title: "Soporte Especializado de Calidad República Dominicana",
+    type: "Calidad",
+    date: "15 Ene 2025",
+    location: "República Dominicana",
+    duration: "2 años",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: republica,
+  },
+  {
+    id: "9",
+    title: "Servicios Especializado de AT y MT Oaxaca, México",
+    type: "Pruebas a equipos",
+    date: "15 Ene 2025",
+    location: "Ingenio Santo Domingo, Oaxaca",
+    duration: "1 mes",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: oaxxx,
+  },
+];
 
 export default function SuccessStoriesSection() {
   const [searchTerm, setSearchTerm] = useState("");

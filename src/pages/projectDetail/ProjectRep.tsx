@@ -5,23 +5,24 @@ import ServicesGrid from '../../components/caseDetail/ServiceGrid';
 import ProjectBenefits from '../../components/caseDetail/ProjectBenefits';
 import Navbar from '../../components/landing/NavBar';
 import TopBar from '../../components/landing/TopBar';
-import bajacalifa from '../../assets/bajacalifa.png'; // Cambia por la imagen correcta
+import republicadominicana from '../../assets/republicadominicana.png'; // Cambia por la imagen correcta
 
-export default function ProjectBajaCalifa() {
+
+export default function ProjectRepublicaDominicana() {
   const projectData = {
-    title: "Asset Management G8X Baja California, México",
-    description: "Soporte especializado para aerogeneradores Gamesa G8X con diagnóstico, refacciones y mantenimiento planificado.",
-    publishDate: "22 de abril de 2025",
-    author: "Carlos Vidal",
-    image: bajacalifa,
+    title: "Soporte Especializado de Calidad República Dominicana",
+    description: "Soporte especializado de Calidad.",
+    publishDate: "24 de abril de 2025",
+    author: "Wilbert Ibarra",
+    image: republicadominicana,
     
     sidebar: {
-      location: "Baja California",
-      technology: "Aerogeneradores Gamesa G8X",
+      location: "República Dominicana",
+      technology: "Aerogeneradores 2.5MW",
       serviceType: "Asistencia técnica y mantenimiento eólico",
-      scope: "Troubleshooting, suministro de refacciones, sustitución de palas, tareas planificadas",
+      scope: "Soporte especializado de Calidad",
       whyUsPoints: [
-        "Experiencia comprobada en aerogeneradores Gamesa",
+        "Experiencia comprobada en aerogeneradores Gamesa y Vestas",
         "Equipo multidisciplinario con especialistas eléctricos, mecánicos y de campo",
         "Capacidad de operar fuera de México manteniendo estándares de seguridad",
         "Enfoque EHS en todas las intervenciones técnicas"
@@ -29,40 +30,30 @@ export default function ProjectBajaCalifa() {
     },
     
     challenges: [
-      "Fallas críticas en el convertidor del aerogenerador que afectaban la operación continua",
-      "Necesidad urgente de refacciones eléctricas y electrónicas especializadas en ubicación remota",
-      "Mantenimiento preventivo y correctivo de convertidores dtc"
+      "Necesidad de asegurar la calidad operativa de aerogeneradores de 2.5MW en condiciones climáticas exigentes",
+      "Mantener estándares internacionales de calidad en servicios especializados",
+      "Garantizar la disponibilidad continua del parque eólico mediante inspecciones preventivas"
     ],
     
     services: [
       {
-        title: "Asistencia en la Gestión de Recursos",
-        description: "Diciembre 2024-2025. Asesoramiento en disponibilidad, mantenimiento preventivo y correctivos",
+        title: "Mantenimiento Preventivo",
+        description: "Servicios programados de mantenimiento preventivo para garantizar la operación óptima de los aerogeneradores",
+        icon: "tool"
+      },
+      {
+        title: "Videoscopía en Multiplicadora",
+        description: "Inspección interna mediante videoscopía de la multiplicadora para detectar desgaste y fallas potenciales",
         icon: "search"
       },
       {
-        title: "Mantenimiento de Palas",
-        description: "Septiembre 2024. Trabajos especializados de palas de aerogeneradores de 2 MW",
-        icon: "tool"
-      },
-      {
-        title: "Suministro de Repuestos",
-        description: "Agosto 2024-2025. Suministro de refacciones eléctricas y electrónicas especializadas",
+        title: "Inspección de Equipos de Seguridad",
+        description: "Revisión exhaustiva de sistemas de seguridad para cumplir con normativas internacionales",
         icon: "package"
       },
       {
-        title: "Reparación de Motores",
-        description: "Septiembre 2024. Servicios de reparación de motores de frecuencia",
-        icon: "wind"
-      },
-      {
-        title: "Reacondicionamiento de Convertidor",
-        description: "Mayo 2024-2025. Servicio Técnico especializado en campo. Reacondicionamiento de convertidor de potencia de aerogenerador ETC",
-        icon: "tool"
-      },
-      {
-        title: "Reacondicionamiento de Generador Canvey",
-        description: "Marzo 2024. Servicio de diagnóstico y reparación del generador",
+        title: "Calidad",
+        description: "Control de calidad especializado en todos los procesos de mantenimiento y operación",
         icon: "wind"
       }
     ],
@@ -75,6 +66,7 @@ export default function ProjectBajaCalifa() {
       "Optimización del rendimiento energético y retorno de inversión del parque eólico"
     ]
   };
+
 
   return (
     <div className="bg-white min-h-screen">
@@ -91,6 +83,7 @@ export default function ProjectBajaCalifa() {
           image={projectData.image}
         />
 
+
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
           {/* Main Content - 2 columns */}
@@ -99,6 +92,7 @@ export default function ProjectBajaCalifa() {
             <ServicesGrid services={projectData.services} />
             <ProjectBenefits benefits={projectData.benefits} />
           </div>
+
 
           {/* Sidebar - 1 column */}
           <div className="lg:col-span-1">

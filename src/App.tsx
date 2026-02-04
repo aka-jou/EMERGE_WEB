@@ -7,6 +7,7 @@ import AdminLogin from './pages/login/AdminLogin';
 import ProjectDetailPage from './pages/projectDetail/ProjectDetailPage';
 import ColaboradoresPage from './pages/socios/CollaboratorsPage';
 import ScrollToTop from './components/ScrollToTop'; 
+import Store from './pages/store/Store';
 
 function App() {
   return (
@@ -20,11 +21,9 @@ function App() {
             <Route path="/team" element={<TeamEmerge />} />
             <Route path="/blog" element={<AdminBlogCreate />} />
             <Route path="/login" element={<AdminLogin />} />
-            
-            {/* Ruta dinámica - funciona para TODOS los proyectos */}
-            <Route path="/project-detail/:id" element={<ProjectDetailPage />} /> {/* ✅ :id dinámico */}
-            
+            <Route path="/project-detail/:id" element={<ProjectDetailPage />} /> 
             <Route path="/colaboradores" element={<ColaboradoresPage />} />
+            <Route path="/store" element={<Store />} />
 
             <Route path="*" element={<div className="p-10 text-center">404 - Página no encontrada</div>} />
           </Routes>

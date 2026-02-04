@@ -21,85 +21,84 @@ const partnersData = {
   europa: [
     {
       country: 'España',
-      type: 'Socorrista',
-      name: 'Solar Energy SRL World',
-      address: 'Sorrenuto, España',
-      services: 'Mainteining, Consulting & Services',
-      phone: '+34 943 31 1041',
-      email: 'info@solarenergysrlworld.es',
-      website: 'www.solarenergysrlworld.es'
+      type: 'Solvento',
+      name: 'Calle Aragó 650, 08018',
+      address: 'Barcelona, España',
+      services: 'Marketing, Consultoría y Servicios',
+      phone: '+34 934 51 3261',
+      email: 'info@solventoconsulting.com',
+      website: 'www.solventoconsulting.com'
     },
     {
       country: 'España',
-      type: 'Prospective',
-      name: 'Solenergía, Edificio Vol. 7',
-      address: '28600 Boadilla Manets, Madrid',
-      city: 'Madrid, Al Atocchsa',
-      phone: '+34 669 48 19621',
-      email: 'aguirroxp@cp.es',
-      website: 'www.cipe.es'
+      type: 'Protecfire',
+      name: 'c/Rilus Cabrera, 23-Mod. Ind. 7',
+      address: '28806 Alcalá de Henares, Madrid',
+      services: 'A-EX Auto Extinción',
+      phone: '+34 669 49 5963',
+      email: 'cgonzalez@a-ex.es',
+      website: 'www.a-ex.es'
     },
     {
-      country: 'Chile',
-      type: 'Energytrust',
-      name: 'Olny USA',
-      services: 'Soluciones de Energia Renovables y Tecnologia',
-      phone: '+53 3 21 01 8013',
-      email: 'accounts@energytrust.com',
-      website: 'www.energytrust.com'
+      country: 'Cuba',
+      type: 'Energyvital',
+      name: 'Olguín Moa',
+      services: 'Soluciones de Energía Renovables y Tecnologías',
+      phone: '+53 53 10 8831',
+      email: 'razaherez@energyvital.com',
+      website: 'www.energyvital.com'
     }
   ],
   latinoamerica: [
     {
       country: 'México',
       type: 'INEEL',
-      name: 'Sistema #102 Parque',
-      address: 'Ind. Bernardino',
-      city: '12340 Alvaro',
-      services: 'Instituto Nacional de Electricidad y Energías',
-      phone: '(777) 36 22 411',
-      email: 'www.insp.globalgap.es',
+      name: 'Reforma #113 Palmira',
+      address: '62490 México',
+      services: 'Instituto Nacional de Electricidad y Energías Limpias',
+      phone: '(777) 36 23 811',
+      email: 'comunicacion@ineel.mx',
       website: 'www.ineel.mx'
     },
     {
       country: 'México',
-      type: 'Cialec',
-      name: 'Av. Camino Real N25',
-      address: '76130 Querétaro',
-      city: 'Ciencia y Tecnología',
-      phone: '(442) 211 2550',
-      email: 'direccion@cialec.mx',
-      website: 'www.cialec.mx'
+      type: 'Ciateq',
+      name: 'Av. Manantiales N°20',
+      address: '76240 Querétaro',
+      services: 'Ciencia y Tecnología',
+      phone: '(442) 211 2500',
+      email: 'ciateq@ciateq.mx',
+      website: 'www.ciateq.mx'
     },
     {
       country: 'México',
       type: 'Villarreal',
-      name: 'Camerino Mendoza',
-      address: '91510 Joaquín, Las Viboras',
-      city: 'Grupo Villarreal',
-      phone: '+52 27 17 17 620',
-      email: 'villarreal@grupovillarreal.com.mx',
-      website: 'www.grupovillarreal.com.mx'
+      name: 'Carretera Transístmica',
+      address: '70102 Juchitán, La Ventosa',
+      services: 'Gruas Villarreal',
+      phone: '+52 921 21 57 426',
+      email: 'cotizacion@gruasvillarreal.com.mx',
+      website: 'www.gruasvillarreal.com.mx'
     },
     {
-      country: 'Chile',
-      type: 'Grupo Matheo',
-      name: 'Av. General José Camacho',
-      address: '20160 Jahne, Chile',
-      city: 'Grupo Matemático',
-      phone: '+52 377 17 45 100',
-      email: 'contacto@gp100.mx',
-      website: 'www.se.blogmatgrup.com.mx'
+      country: 'México',
+      type: 'Grupo Mafico',
+      name: 'Av. General Ávila Camacho',
+      address: '70600 Salina, Cruz',
+      services: 'Ferreterías y Tlapalerías',
+      phone: '+52 971 71 45 355',
+      email: 'surtido@prodigy.net.mx',
+      website: 'www.surtek.prodigy.com.mx'
     },
     {
-      country: 'Chile',
+      country: 'México',
       type: 'Talleres Eden Ezer',
-      name: 'C. 7 de Noviembre, Frac. Las Huertas',
-      address: '34322 Jair de Zaragoza',
-      city: 'Talleres Eden Ezer',
-      phone: '+52 371 71 20 845',
-      email: 'talleresedenezer@planetmax.com.mx',
-      website: 'www.talleresedenezer.com.mx'
+      name: 'C. 7 de Noviembre, Frac. La Planta',
+      address: '70050 Juchitán de Zaragoza',
+      services: 'Taller de Torno',
+      phone: '+52 971 71 20 540',
+      email: 'talleresdetorno@edenezer.com.mx',
+      website: 'www.talleresdetorno.edenezer.com.mx'
     }
   ]
 };
@@ -122,12 +121,15 @@ const PartnerCard: React.FC<{ partner: Partner }> = ({ partner }) => {
           <MapPin className="w-4 h-4 text-gray-400 mt-1 flex-shrink-0" />
           <div className="text-sm text-gray-600">
             <p>{partner.name}</p>
-            <p>{partner.address}</p>
+            {partner.address && <p>{partner.address}</p>}
             {partner.city && <p>{partner.city}</p>}
           </div>
         </div>
         {partner.services && (
-          <p className="text-sm text-gray-600 ml-6">{partner.services}</p>
+          <div className="flex items-start gap-2">
+            <div className="w-4 h-4 flex-shrink-0" />
+            <p className="text-sm text-gray-600">{partner.services}</p>
+          </div>
         )}
       </div>
 
@@ -190,7 +192,7 @@ const ColaboradoresPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Global');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const tabs = ['Global', 'Europa', 'Latinoamérica']; // ✅ Solo 3 tabs
+  const tabs = ['Global', 'Europa', 'Latinoamérica'];
 
   // Función de filtrado
   const filterPartners = (partners: Partner[]) => {
