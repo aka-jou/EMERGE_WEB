@@ -21,100 +21,97 @@ export default function CheckoutSidebar({
       <div className="absolute inset-0 bg-black/50" />
 
       <div
-        className="relative bg-white w-[480px] h-full shadow-xl overflow-y-auto"
+        className="relative bg-white w-full sm:w-[480px] h-full shadow-xl overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 bg-white border-b border-[#e5e5e5] px-[24px] py-[20px] flex items-center justify-between z-10">
-          <h2 className="font-semibold text-[20px] text-[#111827]">
+        <div className="sticky top-0 bg-white border-b border-[#e5e5e5] px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between z-10">
+          <h2 className="font-semibold text-lg sm:text-xl text-[#111827]">
             Carrito de cotización
           </h2>
           <button 
             onClick={onClose}
             className="hover:bg-gray-100 rounded p-1 transition-colors"
           >
-            <X className="size-[20px] text-gray-600" />
+            <X className="size-5 text-gray-600" />
           </button>
         </div>
 
-        <div className="p-[24px]">
+        <div className="p-4 sm:p-6">
           {cart.length === 0 ? (
-            <div className="text-center py-[80px]">
-              <p className="font-normal text-[16px] text-[#737373]">
+            <div className="text-center py-16 sm:py-20">
+              <p className="font-normal text-base text-[#737373]">
                 Tu carrito está vacío
               </p>
             </div>
           ) : (
-            <div className="space-y-[24px]">
+            <div className="space-y-4 sm:space-y-6">
               {cart.map((item) => (
                 <div
                   key={item.product.id}
-                  className="border border-[#e5e5e5] rounded-[8px] p-[16px]"
+                  className="border border-[#e5e5e5] rounded-lg p-3 sm:p-4"
                 >
-                  <div className="flex gap-[16px] mb-[16px]">
-                    {/* Imagen del producto */}
-                    <div className="w-[80px] h-[80px] bg-[#f5f5f5] rounded-[8px] overflow-hidden flex items-center justify-center">
+                  <div className="flex gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#f5f5f5] rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
                       <img 
                         src={item.product.image} 
                         alt={item.product.name}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-[18px] text-[#111827] mb-[4px]">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-sm sm:text-base text-[#111827] mb-1 line-clamp-2">
                         {item.product.name}
                       </h3>
-                      <p className="font-normal text-[14px] text-[#4b5563] mb-[8px]">
+                      <p className="font-normal text-xs sm:text-sm text-[#4b5563] mb-2 line-clamp-1">
                         {item.product.model}
                       </p>
-                      <div className="flex items-center gap-[16px]">
-                        <div className="flex items-center gap-[8px]">
-                          <Truck className="size-[14px] text-[#4b5563]" />
-                          <span className="font-normal text-[14px] text-[#4b5563]">
-                            {item.product.delivery}
-                          </span>
-                        </div>
+                      <div className="flex items-center gap-2">
+                        <Truck className="size-3 sm:size-3.5 text-[#4b5563] flex-shrink-0" />
+                        <span className="font-normal text-xs text-[#4b5563]">
+                          {item.product.delivery}
+                        </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-[12px]">
-                      <span className="font-normal text-[14px] text-[#4b5563]">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <span className="font-normal text-xs sm:text-sm text-[#4b5563]">
                         Cantidad:
                       </span>
 
-                      <div className="flex items-center border border-[#d1d5db] rounded-[6px] overflow-hidden">
+                      <div className="flex items-center border border-[#d1d5db] rounded-md overflow-hidden">
                         <button
-                          className="w-[38px] h-[32px] flex items-center justify-center hover:bg-gray-100 transition-colors"
+                          className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-gray-100 transition-colors active:bg-gray-200"
                           onClick={() => onUpdateQty(item.product.id, item.quantity - 1)}
                         >
-                          <Minus className="size-[14px] text-gray-600" />
+                          <Minus className="size-3 sm:size-3.5 text-gray-600" />
                         </button>
 
-                        <div className="w-[48px] h-[32px] bg-[#f9fafb] border-l border-r border-[#d1d5db] flex items-center justify-center">
-                          <span className="font-normal text-[16px] text-black">
+                        <div className="w-10 sm:w-12 h-8 sm:h-10 bg-[#f9fafb] border-l border-r border-[#d1d5db] flex items-center justify-center">
+                          <span className="font-normal text-sm sm:text-base text-black">
                             {item.quantity}
                           </span>
                         </div>
 
                         <button
-                          className="w-[38px] h-[32px] flex items-center justify-center hover:bg-gray-100 transition-colors"
+                          className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-gray-100 transition-colors active:bg-gray-200"
                           onClick={() => onUpdateQty(item.product.id, item.quantity + 1)}
                         >
-                          <Plus className="size-[14px] text-gray-600" />
+                          <Plus className="size-3 sm:size-3.5 text-gray-600" />
                         </button>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-[16px]">
-                      <span className="font-bold text-[20px] text-[#111827]">
+                    <div className="flex items-center gap-2 sm:gap-4">
+                      <span className="font-bold text-base sm:text-lg text-[#111827]">
                         {item.product.price || "Consultar"}
                       </span>
                       <button 
                         onClick={() => onRemove(item.product.id)}
-                        className="hover:bg-red-50 p-2 rounded transition-colors"
+                        className="hover:bg-red-50 p-2 rounded transition-colors active:bg-red-100"
                       >
-                        <Trash2 className="size-[16px] text-red-600" />
+                        <Trash2 className="size-4 text-red-600" />
                       </button>
                     </div>
                   </div>
@@ -125,27 +122,27 @@ export default function CheckoutSidebar({
         </div>
 
         {cart.length > 0 && (
-          <div className="sticky bottom-0 bg-white border-t border-[#e5e5e5] p-[24px]">
-            <div className="mb-[16px]">
-              <div className="flex items-center justify-between mb-[8px]">
-                <span className="font-normal text-[16px] text-[#4b5563]">
+          <div className="sticky bottom-0 bg-white border-t border-[#e5e5e5] p-4 sm:p-6 safe-area-bottom">
+            <div className="mb-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-normal text-sm sm:text-base text-[#4b5563]">
                   Subtotal ({totalItems} items):
                 </span>
-                <span className="font-bold text-[20px] text-[#111827]">
+                <span className="font-bold text-lg sm:text-xl text-[#111827]">
                   Consultar
                 </span>
               </div>
-              <p className="font-normal text-[14px] text-[#737373]">
+              <p className="font-normal text-xs sm:text-sm text-[#737373]">
                 Precios finales disponibles al solicitar cotización
               </p>
             </div>
 
-            <button className="w-full h-[48px] bg-[#006400] text-white rounded-[8px] font-semibold text-[16px] mb-[12px] hover:bg-[#005900] transition-colors">
+            <button className="w-full h-11 sm:h-12 bg-[#006400] text-white rounded-lg font-semibold text-sm sm:text-base mb-3 hover:bg-[#005900] transition-colors active:bg-[#004700]">
               Solicitar cotización
             </button>
             <button 
               onClick={onClose}
-              className="w-full h-[48px] bg-white border border-[#d4d4d4] text-[#171717] rounded-[8px] font-medium text-[16px] hover:bg-gray-50 transition-colors"
+              className="w-full h-11 sm:h-12 bg-white border border-[#d4d4d4] text-[#171717] rounded-lg font-medium text-sm sm:text-base hover:bg-gray-50 transition-colors active:bg-gray-100"
             >
               Continuar comprando
             </button>

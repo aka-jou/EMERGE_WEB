@@ -9,6 +9,7 @@ import ProductDetailModal from "../../components/store/ProductDetailModal";
 import CheckoutSidebar from "../../components/store/CheckoutSidebar";
 import Navbar from "../../components/landing/NavBar.tsx";
 import Footer from "../../components/landing/Footer.tsx";
+
 export default function Store() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showCheckout, setShowCheckout] = useState(false);
@@ -48,15 +49,15 @@ export default function Store() {
 
   return (
     <div className="bg-[#fafafa] min-h-screen w-full relative">
-        <Navbar/>
+      <Navbar/>
       <StoreHeader
         showCheckout={showCheckout}
         totalItems={getTotalItems()}
         onToggleCheckout={() => setShowCheckout((s) => !s)}
       />
 
-      <main className="mx-auto max-w-[1280px] px-[80px] py-[40px]">
-        <div className="flex gap-[40px]">
+      <main className="mx-auto max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-20 py-6 sm:py-8 md:py-10">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10">
           <FiltersSidebar />
 
           <ProductsGrid
