@@ -14,6 +14,7 @@ export interface ProjectDetail {
   publishDate: string;
   author: string;
   image: any;
+  gallery?: string[];
   sidebar: {
     location: string;
     technology: string;
@@ -35,7 +36,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Asistencia Técnica Especializada G8X Newport",
     description: "Soporte especializado para aerogeneradores Gamesa G8X con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "24 de abril de 2025",
-    author: "Carlos Vidal",
+    author: "Wilbert Rivera",
     image: jama,
     sidebar: {
       location: "Jamaica",
@@ -89,7 +90,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Contrato Marco de Asistencia Técnica Especializada",
     description: "Soporte especializado para aerogeneradores Gamesa G52 con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "06 de abril de 2025",
-    author: "Carlos Vidal",
+    author: "Wilbert Rivera",
     image: oaxacaim,
     sidebar: {
       location: "Oaxaca Istmo",
@@ -121,7 +122,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
       },
       {
         title: "Servicio de Reacondicionamiento de Convertidor",
-        description: "2025: Servicio técnico especializado en campo 'Reacondicionamiento de convertidor de potencias CAL'",
+        description: "2025: Servicio técnico especializado en campo 'Reacondicionamiento de convertidor de potencias DAC",
         icon: "tool"
       },
       {
@@ -140,10 +141,10 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
   },
   
   "3": {
-    title: "Asset Management G8X",
-    description: "Soporte especializado para aerogeneradores Gamesa G8X y V80 con diagnóstico, refacciones y mantenimiento planificado.",
+    title: "Asset Management G8X, Baja California, México",
+    description: "Soporte especializado para aerogeneradores Gamesa G8X con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "22 de abril de 2025",
-    author: "Carlos Vidal",
+    author: "Wilbert Rivera",
     image: bajacalifa,
     sidebar: {
       location: "Baja California",
@@ -180,7 +181,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
       },
       {
         title: "Reparación de Motores",
-        description: "Septiembre 2024. Servicios de reparación de motores de frecuencia",
+        description: "Septiembre 2024. Servicios de reparación de motores",
         icon: "wind"
       }
     ],
@@ -197,7 +198,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Asistencia Técnica Especializada G52",
     description: "Soporte especializado para aerogeneradores Gamesa G52 con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "03 de abril de 2025",
-    author: "Wilson Blanco",
+    author: "Wilbert Rivera",
     image: cuba,
     sidebar: {
       location: "Olguín, Cuba",
@@ -250,7 +251,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Asistencia Técnica Especializada en Tecnología G9X Chiapas, México",
     description: "Soporte especializado para aerogeneradores Gamesa G9X con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "3 de abril de 2025",
-    author: "Wilbert Ibarra",
+    author: "Wilbert Rivera",
     image: chiapas,
     sidebar: {
       location: "Arriaga, Chiapas",
@@ -314,7 +315,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Servicio Tecnico, Especializado Env2.5 MW Merida, Yucatan",
     description: "Soporte especializado para aerogeneradores Envision 2.5 MW con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "24 de abril de 2025",
-    author: "Wilbert Ibarra",
+    author: "Wilbert Rivera",
     image: merida,
     sidebar: {
       location: "Dzilam de Bravo Yucatan",
@@ -368,7 +369,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Troubleshooting Piedra Larga I G8X Oaxaca, México",
     description: "Soporte especializado para aerogeneradores Gamesa G80 con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "24 de abril de 2025",
-    author: "Wilbert Ibarra",
+    author: "Wilbert Rivera",
     image: oaxx,
     sidebar: {
       location: "Oaxaca, Istmo",
@@ -422,7 +423,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Soporte Especializado de Calidad República Dominicana",
     description: "Soporte especializado de Calidad.",
     publishDate: "24 de abril de 2025",
-    author: "Wilbert Ibarra",
+    author: "Wilbert Rivera",
     image: republica,
     sidebar: {
       location: "República Dominicana",
@@ -476,7 +477,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
     title: "Servicios Especializado en AT y MT Oaxaca, México",
     description: "Soporte especializado en AT y MT con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "24 de abril de 2025",
-    author: "Wilbert Ibarra",
+    author: "Wilbert Rivera",
     image: oaxxx,
     sidebar: {
       location: "Juchitán de Zaragoza, Oaxaca",

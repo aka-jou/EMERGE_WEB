@@ -8,6 +8,7 @@ import ProjectDetailPage from './pages/projectDetail/ProjectDetailPage';
 import ColaboradoresPage from './pages/socios/CollaboratorsPage';
 import ScrollToTop from './components/ScrollToTop'; 
 import Store from './pages/store/Store';
+import ProjectAtmt from './pages/projectDetail/ProjectAtmt';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/project-detail/:id" element={<ProjectDetailPage />} /> 
             <Route path="/colaboradores" element={<ColaboradoresPage />} />
             <Route path="/store" element={<Store />} />
+            <Route path="/project-detail/9" element={<ProjectAtmt />} />
 
             <Route path="*" element={<div className="p-10 text-center">404 - Página no encontrada</div>} />
           </Routes>

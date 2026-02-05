@@ -9,11 +9,13 @@ import piedralarga from '../../assets/piedralarga.png'; // Cambia por la imagen 
 
 
 export default function ProjectPiedraLarga() {
+  console.log("🔥🔥🔥 ARCHIVO CARGADO - TEST 999 🔥🔥🔥");
+  
   const projectData = {
     title: "Troubleshooting Piedra Larga I G8X Oaxaca, México",
     description: "Soporte especializado para aerogeneradores Gamesa G80 con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "24 de abril de 2025",
-    author: "Wilbert Ibarra",
+    author: "Wilbert Rivera",
     image: piedralarga,
     
     sidebar: {

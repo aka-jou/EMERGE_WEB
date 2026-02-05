@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Images } from 'lucide-react';
 import ProjectHero from '../../components/caseDetail/ProjectHero';
 import ProjectChallenge from '../../components/caseDetail/ProjectChallenge';
@@ -9,12 +9,17 @@ import Navbar from '../../components/landing/NavBar';
 import TopBar from '../../components/landing/TopBar';
 import oaxaca from '../../assets/oaxacaim.png';
 
-// Importa más imágenes del proyecto (agrega las que tengas)
-import oaxaca2 from '../../assets/oaxaca2.png';
-import oaxaca3 from '../../assets/oaxaca3.png';
-import oaxaca4 from '../../assets/oaxaca4.png';
+// Imágenes de prueba desde Picsum
+const placeholderImages = [
+  'https://picsum.photos/seed/electric1/1200/800',
+  'https://picsum.photos/seed/electric2/1200/800',
+  'https://picsum.photos/seed/electric3/1200/800',
+  'https://picsum.photos/seed/electric4/1200/800',
+  'https://picsum.photos/seed/electric5/1200/800',
+  'https://picsum.photos/seed/electric6/1200/800',
+];
 
-export default function ProjectOaxaca() {
+export default function ProjectAtmt() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -22,16 +27,12 @@ export default function ProjectOaxaca() {
     title: "Servicios Especializado en AT y MT Oaxaca, México",
     description: "Soporte especializado en AT y MT con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "24 de abril de 2025",
-    author: "Wilbert Ibarra",
+    author: "Wilbert Rivera",
     image: oaxaca,
     
-    // 👇 Array de todas las fotos del proyecto
     gallery: [
       oaxaca,
-      oaxaca2,
-      oaxaca3,
-      oaxaca4,
-      // Agrega más imágenes aquí
+      ...placeholderImages
     ],
     
     sidebar: {
@@ -95,7 +96,6 @@ export default function ProjectOaxaca() {
     ]
   };
 
-  // Funciones para la galería
   const nextImage = () => {
     setCurrentImageIndex((prev) => 
       prev === projectData.gallery.length - 1 ? 0 : prev + 1
@@ -108,14 +108,42 @@ export default function ProjectOaxaca() {
     );
   };
 
+  useEffect(() => {
+    if (!isGalleryOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'Escape') setIsGalleryOpen(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isGalleryOpen, currentImageIndex]);
+
+  useEffect(() => {
+    if (isGalleryOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isGalleryOpen]);
+
+  const openGallery = (index = 0) => {
+    setCurrentImageIndex(index);
+    setIsGalleryOpen(true);
+  };
+
   return (
     <div className="bg-white min-h-screen">
       <TopBar />
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
-        {/* Hero Section con botón de galería */}
-        <div className="relative">
+        <div className="relative mb-4">
           <ProjectHero
             title={projectData.title}
             description={projectData.description}
@@ -123,18 +151,19 @@ export default function ProjectOaxaca() {
             author={projectData.author}
             image={projectData.image}
           />
-          
-          {/* Botón "Ver todas las fotos" */}
+        </div>
+
+        {/* Botón Ver todas las fotos */}
+        <div className="flex justify-end -mt-16 mb-8 px-4 relative z-50">
           <button
-            onClick={() => setIsGalleryOpen(true)}
-            className="absolute bottom-4 right-4 flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white backdrop-blur-sm text-gray-800 font-medium rounded-lg shadow-lg transition-all hover:shadow-xl"
+            onClick={() => openGallery(0)}
+            className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white backdrop-blur-sm text-gray-800 font-medium rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
           >
             <Images size={20} />
             Ver todas las fotos ({projectData.gallery.length})
           </button>
         </div>
 
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
           <div className="lg:col-span-2">
             <ProjectChallenge challenges={projectData.challenges} />
@@ -158,55 +187,58 @@ export default function ProjectOaxaca() {
 
       {/* Modal de Galería */}
       {isGalleryOpen && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center">
-          {/* Botón cerrar */}
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setIsGalleryOpen(false);
+          }}
+        >
           <button
             onClick={() => setIsGalleryOpen(false)}
             className="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-full transition-colors z-10"
+            aria-label="Cerrar galería"
           >
             <X size={32} />
           </button>
 
-          {/* Contador */}
-          <div className="absolute top-4 left-4 text-white text-lg font-medium z-10">
+          <div className="absolute top-4 left-4 text-white text-lg font-medium z-10 bg-black/30 px-4 py-2 rounded-lg backdrop-blur-sm">
             {currentImageIndex + 1} / {projectData.gallery.length}
           </div>
 
-          {/* Botón anterior */}
           <button
             onClick={prevImage}
-            className="absolute left-4 p-3 text-white hover:bg-white/10 rounded-full transition-colors z-10"
+            className="absolute left-4 p-3 text-white hover:bg-white/10 rounded-full transition-all hover:scale-110 z-10"
+            aria-label="Imagen anterior"
           >
             <ChevronLeft size={40} />
           </button>
 
-          {/* Imagen actual */}
           <div className="max-w-7xl max-h-[90vh] mx-auto px-20">
             <img
+              key={currentImageIndex}
               src={projectData.gallery[currentImageIndex]}
               alt={`Foto ${currentImageIndex + 1} del proyecto`}
               className="w-full h-full object-contain"
             />
           </div>
 
-          {/* Botón siguiente */}
           <button
             onClick={nextImage}
-            className="absolute right-4 p-3 text-white hover:bg-white/10 rounded-full transition-colors z-10"
+            className="absolute right-4 p-3 text-white hover:bg-white/10 rounded-full transition-all hover:scale-110 z-10"
+            aria-label="Imagen siguiente"
           >
             <ChevronRight size={40} />
           </button>
 
-          {/* Thumbnails (miniaturas) */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 overflow-x-auto max-w-4xl px-4">
             {projectData.gallery.map((img, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
                   index === currentImageIndex
-                    ? 'border-white scale-110'
-                    : 'border-transparent opacity-60 hover:opacity-100'
+                    ? 'border-white scale-110 shadow-lg'
+                    : 'border-transparent opacity-60 hover:opacity-100 hover:scale-105'
                 }`}
               >
                 <img

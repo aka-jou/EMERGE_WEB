@@ -12,12 +12,12 @@ export default function ProjectBajaCalifa() {
     title: "Asset Management G8X Baja California, México",
     description: "Soporte especializado para aerogeneradores Gamesa G8X con diagnóstico, refacciones y mantenimiento planificado.",
     publishDate: "22 de abril de 2025",
-    author: "Carlos Vidal",
+    author: "Wilbert Rivera",
     image: bajacalifa,
     
     sidebar: {
       location: "Baja California",
-      technology: "Aerogeneradores Gamesa G8X",
+      technology: "Aerogeneradores Gamesa G80 ",
       serviceType: "Asistencia técnica y mantenimiento eólico",
       scope: "Troubleshooting, suministro de refacciones, sustitución de palas, tareas planificadas",
       whyUsPoints: [
@@ -52,7 +52,7 @@ export default function ProjectBajaCalifa() {
       },
       {
         title: "Reparación de Motores",
-        description: "Septiembre 2024. Servicios de reparación de motores de frecuencia",
+        description: "Septiembre 2024. Servicios de reparación de motores",
         icon: "wind"
       },
       {

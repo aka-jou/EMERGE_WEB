@@ -24,10 +24,21 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-medium text-white mb-6">Servicios</h4>
             <ul className="space-y-3 text-sm">
-              <FooterLink>Gestión especializada y optimización de procesos</FooterLink>
-              <FooterLink>Mantenimiento y diagnóstico especializado</FooterLink>
-              <FooterLink>Subestaciones y líneas de transmisión</FooterLink>
-              <FooterLink>Suministro y reparación de componentes</FooterLink>
+              <FooterLink>Sistemas Fotovoltaicos</FooterLink>
+              <FooterLink>Energía Eólica</FooterLink>
+              <FooterLink>Eficiencia Energética</FooterLink>
+              <FooterLink>Mantenimiento Preventivo</FooterLink>
+              <FooterLink>Consultoría</FooterLink>
+              <FooterLink>Evaluación de Fallas Mecanicas</FooterLink>
+              <FooterLink>Pruebas estaticas en generadores</FooterLink>
+              <FooterLink>Videoscopia en multiplicadoras</FooterLink>
+              <FooterLink>Suministro de refacciones</FooterLink>
+              <FooterLink>Reparación de motores</FooterLink>
+              <FooterLink>Inspección de palas</FooterLink>
+              <FooterLink>Análisis de vibración</FooterLink>
+              <FooterLink>Reacondicionamiento mecánico</FooterLink>
+              <FooterLink>Fabricación de utillaje especial</FooterLink>
+      
              
             </ul>
           </div>

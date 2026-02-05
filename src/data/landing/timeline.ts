@@ -4,10 +4,10 @@ import type { TrajectoryItem, StatItem } from "../../components/landing/types";
 export const TIMELINE: TrajectoryItem[] = [
   {
     year: "2024",
-    badge: "Estrategia & Liderazgo",
-    title: "Consolidación Nacional",
+    badge: "",
+    title: "Estrategia",
     description:
-      "Aporte de contenido nacional en servicios especializados. Liderazgo en el mercado con 44% de cuota actual.",
+      "Aporte de de contenido nacional en servicios especializados.",
     icon: Trophy,
     color: "bg-[#005900]",
     textColor: "text-white",
@@ -16,10 +16,10 @@ export const TIMELINE: TrajectoryItem[] = [
   },
   {
     year: "2018",
-    badge: "Expansión",
-    title: "Diversificación de Cartera",
+    badge: "",
+    title: "Experiencia",
     description:
-      "Creación de nuevas carteras de servicios. Representación técnico-comercial de 3 ISP emergentes y suma de 1.8 GW+.",
+      "Creación de nuevas carteras de servicios.",
     icon: Zap,
     color: "bg-white",
     textColor: "text-[#1D1D1D]",
@@ -29,10 +29,10 @@ export const TIMELINE: TrajectoryItem[] = [
   },
   {
     year: "2013",
-    badge: "El Origen",
-    title: "Los Cimientos",
+    badge: "",
+    title: "Aprendizaje",
     description:
-      "Inicio como Coordinador O&M. De 234 MW a 1.5 GW en 5 años. Aprendizaje clave con Gamesa, Acciona y Clipper.",
+      "O & M Gamesa, Eco-100, Acciona, Envision, Clipper.",
     icon: Sprout,
     color: "bg-gray-50",
     textColor: "text-gray-700",

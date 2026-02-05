@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Cpu, Users, Globe, Target, Eye, Heart } from "lucide-react";
-import about from "../../assets/about.png";
+import divemer from "../../assets/divemer.png";
 import { Link } from "react-router-dom";
 
 export default function AboutSection() {
@@ -34,7 +34,7 @@ export default function AboutSection() {
           >
             <div className="overflow-hidden rounded-xl shadow-lg relative z-10 h-[400px] group">
               <img
-                src={about}
+                src={divemer}
                 alt="Mantenimiento Eólico"
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
