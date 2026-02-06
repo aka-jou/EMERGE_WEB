@@ -50,7 +50,7 @@ export default function TrajectorySection() {
       <div className="container mx-auto px-4 md:px-8 lg:px-20 relative z-10">
         <div className="text-center mb-28">
           <h2 className="text-4xl md:text-5xl font-bold text-[#005900] mb-6">Nuestra Trayectoria</h2>
-          <p className="max-w-2xl mx-auto text-gray-500 text-lg">Nuestro Fundador en 2013 Inicia en sector eólico como Coordinador O&M de 234 MW 3 parques eólicos aumentando año con año hasta alcanzar 1.5 GW para la principal ISP de México en 12 parques simultáneos en 5 años.
+          <p className="max-w-2xl mx-auto text-gray-500 text-lg text-justify">Nuestro Fundador en 2013 Inicia en sector eólico como Coordinador O&M de 234 MW 3 parques eólicos aumentando año con año hasta alcanzar 1.5 GW para la principal ISP de México en 12 parques simultáneos en 5 años.
 
 Del 2018 al 2023 transporta su experiencia a la representación técnica-comercial de 3 ISP emergentes en eólica y solar cumpliendo sus Hitos y agregando 1.8 GW+ como mantenedor multibrand.</p>
         </div>

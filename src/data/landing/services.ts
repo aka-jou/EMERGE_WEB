@@ -30,11 +30,11 @@ export const SERVICES: Service[] = [
     items: [
       "Videoscopia en multiplicadoras",
       "Pruebas estáticas en generadores",
-      "Diagnóstico de fallas eléctricas",
+      "Diagnóstico de fallas eléctricas (Troubleshooting)",
       "Evaluación de fallas mecánicas",
       "Análisis de vibraciones",
       "Inspección de palas",
-      "Mantenimiento preventivo",
+      "Operación y mantenimiento eólico",
     ],
   },
   {
@@ -47,11 +47,11 @@ export const SERVICES: Service[] = [
     items: [
       "Pruebas eléctricas a equipos primarios",
       "Líneas de transmisión en alta, media y baja tensión",
-      "Celdas de media tensión",
+      "Calibración de cuchillas de AT/MT",
       "Mantenimiento preventivo en subestaciones eléctricas",
       "Reparación de celdas de media tensión",
       "Localización de fallas en redes",
-      "Comunicaciones y control",
+      "Mantenimiento a equipos de comunicación y control",
     ],
   },
   {

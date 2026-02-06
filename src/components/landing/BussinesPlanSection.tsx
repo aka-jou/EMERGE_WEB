@@ -105,27 +105,27 @@ export default function BusinessPlanSection() {
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 pt-8 border-t border-gray-100">
-          <div className="flex gap-4">
-            <div className="w-1 bg-[#005900] h-full rounded-full flex-shrink-0" />
-            <div>
-              <h4 className="font-bold text-[#005900] mb-2 text-lg">Sentido Global</h4>
-              <p className="text-gray-600 leading-relaxed">
-                En función de los intereses de cliente adecuamos la información para soporte en la toma de decisiones desde un sentido Global.
-              </p>
-            </div>
-          </div>
+  <div className="flex gap-4">
+    <div className="w-1 bg-[#005900] h-full rounded-full flex-shrink-0" />
+    <div>
+      <h4 className="font-bold text-[#005900] mb-3 text-2xl"></h4>
+      <p className="text-gray-600 leading-relaxed text-lg">
+        En función de los intereses de cliente adecuamos la información para soporte en la toma de decisiones desde un <span className="text-[#005900] font-semibold">sentido global</span>.
+      </p>
+    </div>
+  </div>
 
+  <div className="flex gap-4 text-right md:text-left flex-row-reverse md:flex-row">
+    <div className="w-1 bg-[#005900] h-full rounded-full flex-shrink-0 md:order-last" />
+    <div>
+      <h4 className="font-bold text-[#005900] mb-3 text-2xl"></h4>
+      <p className="text-gray-600 leading-relaxed text-lg">
+        Analizamos desde una <span className="text-[#005900] font-semibold">perspectiva puntual</span> y ofrecemos soluciones micro con efecto directo en los <span className="text-[#005900] font-semibold">resultados macro</span>.
+      </p>
+    </div>
+  </div>
+</div>
 
-          <div className="flex gap-4 text-right md:text-left flex-row-reverse md:flex-row">
-            <div className="w-1 bg-[#005900] h-full rounded-full flex-shrink-0 md:order-last" />
-            <div>
-              <h4 className="font-bold text-[#005900] mb-2 text-lg">Resultados Macro</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Analizamos desde una perspectiva puntual y ofrecemos soluciones micro con efecto directo en los resultados Macro.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

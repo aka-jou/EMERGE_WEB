@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Cpu, Users, Globe, Target, Eye, Heart } from "lucide-react";
-import divemer from "../../assets/divemer.png";
+import mantte from "../../assets/mantte.jpeg";
 import { Link } from "react-router-dom";
 
 export default function AboutSection() {
@@ -34,7 +34,7 @@ export default function AboutSection() {
           >
             <div className="overflow-hidden rounded-xl shadow-lg relative z-10 h-[400px] group">
               <img
-                src={divemer}
+                src={mantte}
                 alt="Mantenimiento Eólico"
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
@@ -99,7 +99,7 @@ export default function AboutSection() {
           className="bg-white rounded-xl shadow-sm border border-gray-100 py-6 px-4 mb-12"
         >
           <div className="flex flex-wrap justify-between gap-6 md:gap-4 text-center md:text-left">
-            <MiniBadge icon={<Award className="w-5 h-5 text-[#005900]" />} text="Certificación ISO 9001:2015" />
+            <MiniBadge icon={<Award className="w-5 h-5 text-[#005900]" />} text="(SGI)" />
             <MiniBadge icon={<Cpu className="w-5 h-5 text-[#005900]" />} text="Tecnología de Vanguardia" />
             <MiniBadge icon={<Users className="w-5 h-5 text-[#005900]" />} text="Equipo Multidisciplinario" />
             <MiniBadge icon={<Globe className="w-5 h-5 text-[#005900]" />} text="Cobertura Internacional" />

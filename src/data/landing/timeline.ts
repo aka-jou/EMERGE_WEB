@@ -7,7 +7,7 @@ export const TIMELINE: TrajectoryItem[] = [
     badge: "",
     title: "Estrategia",
     description:
-      "Aporte de de contenido nacional en servicios especializados.",
+      "Aporte de contenido nacional en servicios especializados del sector eólico.",
     icon: Trophy,
     color: "bg-[#005900]",
     textColor: "text-white",
@@ -19,7 +19,7 @@ export const TIMELINE: TrajectoryItem[] = [
     badge: "",
     title: "Experiencia",
     description:
-      "Creación de nuevas carteras de servicios.",
+      "Creación de nuevas carteras de servicios, desarrollando y consolidando ISP's emergentes en el mercado eólico nacional.",
     icon: Zap,
     color: "bg-white",
     textColor: "text-[#1D1D1D]",
@@ -32,7 +32,7 @@ export const TIMELINE: TrajectoryItem[] = [
     badge: "",
     title: "Aprendizaje",
     description:
-      "O & M Gamesa, Eco-100, Acciona, Envision, Clipper.",
+      "Operación y mantenimiento en tecnologías inteligentes, Gamesa, Eco-100, Acciona, Envision, Clipper y Vestas.",
     icon: Sprout,
     color: "bg-gray-50",
     textColor: "text-gray-700",

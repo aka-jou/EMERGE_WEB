@@ -78,7 +78,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-3 bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.2)] px-4 py-2.5 rounded-lg">
               <Award className="w-3.5 h-3.5 text-[#a3a3a3]" />
-              <span className="text-sm text-white">ISO 9001 Certificado</span>
+              <span className="text-sm text-white">Sistema de gestión integrado (SGI) </span>
             </div>
           </div>
         </div>

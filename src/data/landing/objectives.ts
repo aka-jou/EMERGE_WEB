@@ -5,7 +5,7 @@ export const OBJECTIVES: Objective[] = [
     id: 1,
     title: "Conservación de Activos",
     description:
-      "Más allá del mantenimiento Preventivo y Correctivo conocido en el mercado incorporamos el análisis de datos como nuestra mayor fortaleza en el mantenimiento.",
+      "Más allá del mantenimiento Preventivo y Correctivo conocido en el mercado, incorporamos el análisis de datos como nuestra mayor fortaleza en el mantenimiento.",
   },
   {
     id: 2,
@@ -17,12 +17,12 @@ export const OBJECTIVES: Objective[] = [
     id: 3,
     title: "Reducir costos",
     description:
-      "Enfoque al cliente y la mejor red integrada nos permite ser parte de los procesos como si fueran nuestros así elegimos y ofrecemos en todo momento la mejor solución.",
+      "Con enfoque al cliente y la mejor red integrada, nos volvemos parte de los procesos como si fueran nuestros, así elegimos y ofrecemos en todo momento la mejor solución.",
   },
   {
     id: 4,
     title: "Mejoras al desempeño",
     description:
-      "Nuestra gestión estratégica permite ofrecer programas específicos de mejora basados en los indicadores de desempeño de cada componente de sus activos.",
+      "Nuestra gestión estratégica, permite ofrecer programas específicos de mejora basados en los indicadores de desempeño de cada componente de sus activos.",
   },
 ];
