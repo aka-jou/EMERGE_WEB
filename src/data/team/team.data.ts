@@ -7,6 +7,7 @@ import wilver from "../../assets/wilver.png";
 import hector from "../../assets/hector.png";
 import sergio from "../../assets/sergio.png";
 import sandro from "../../assets/sandro.png";
+import zer from "../../assets/zer.png";
 
 
  export const DEPARTMENTS_DATA: Department[] = [
@@ -69,7 +70,7 @@ import sandro from "../../assets/sandro.png";
         location: "Juchitan de Zaragoza Oaxaca",
         phone: "+34 93 456 7891",
         email: "jonathan.zertuche@grupoemerge.com.mx",
-        imageBg: "#e5e7eb",
+        image: zer,
       },
     ],
   },
