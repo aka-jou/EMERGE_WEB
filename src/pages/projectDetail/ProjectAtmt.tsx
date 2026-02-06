@@ -173,15 +173,7 @@ export default function ProjectAtmt() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
         {/* Botón Ver todas las fotos */}
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={() => openGallery(0)}
-            className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 font-medium rounded-lg shadow-sm transition-all duration-200 hover:shadow-md"
-          >
-            <Images size={20} />
-            Ver todas las fotos ({projectData.gallery.length})
-          </button>
-        </div>
+        
 
         {/* Hero Section */}
         <div className="mb-8">
@@ -192,6 +184,15 @@ export default function ProjectAtmt() {
             author={projectData.author}
             image={projectData.image}
           />
+        </div>
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={() => openGallery(0)}
+            className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 font-medium rounded-lg shadow-sm transition-all duration-200 hover:shadow-md"
+          >
+            <Images size={20} />
+            Ver todas las fotos ({projectData.gallery.length})
+          </button>
         </div>
 
         {/* Main Content Grid */}
@@ -268,10 +269,7 @@ export default function ProjectAtmt() {
                   <ChevronRight size={24} />
                 </button>
 
-                {/* Contador centrado abajo */}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gray-800/70 text-white text-xs rounded-full">
-                  {currentImageIndex + 1}/{projectData.gallery.length}
-                </div>
+               
               </div>
 
               {/* Miniaturas Desktop: Columna vertical | Mobile: Fila horizontal */}
