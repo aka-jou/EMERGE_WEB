@@ -6,9 +6,10 @@ import josue from "../../assets/josue.png";
 import wilver from "../../assets/wilver.png";
 import hector from "../../assets/hector.png";
 import sergio from "../../assets/sergio.png";
+import sandro from "../../assets/sandro.png";
 
 
-export const DEPARTMENTS_DATA: Department[] = [
+ export const DEPARTMENTS_DATA: Department[] = [
   {
     title: "Dirección / Managing",
     description: "Liderazgo estratégico y toma de decisiones ejecutivas",
@@ -96,7 +97,7 @@ export const DEPARTMENTS_DATA: Department[] = [
       },
       {
         id: "8",
-        name: "Roberto Ortegui",
+        name: "Roberto Otaqui",
         role: "Supervisor O&M",
         location: "Juchitan de Zaragoza Oaxaca",
         phone: "+52 951 231 3578",
@@ -119,7 +120,7 @@ export const DEPARTMENTS_DATA: Department[] = [
         location: "Juchitan de Zaragoza Oaxaca",
         phone: "+52 971 206 4985",
         email: "sandro.santiago@grupoemerge.com.mx",
-        imageBg: "#e5e7eb",
+        image: sandro,
       },
       {
         id: "11",

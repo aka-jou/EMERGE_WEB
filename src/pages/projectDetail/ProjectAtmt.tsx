@@ -8,15 +8,44 @@ import ProjectBenefits from '../../components/caseDetail/ProjectBenefits';
 import Navbar from '../../components/landing/NavBar';
 import TopBar from '../../components/landing/TopBar';
 import oaxaca from '../../assets/oaxacaim.png';
+import ex1 from '../../assets/ex1.jpeg';
+import ex2 from '../../assets/ex2.jpeg';
+import ex3 from '../../assets/ex3.jpeg';  
+import ex4 from '../../assets/ex4.jpeg';
+import ex5 from '../../assets/ex5.jpeg';
+import ex6 from '../../assets/ex6.jpeg';
+import ex7 from '../../assets/ex7.jpeg';
+import ex8 from '../../assets/ex8.jpeg';
+import ex9 from '../../assets/ex9.jpeg';
+import ex10 from '../../assets/ex10.jpeg';
+import ex11 from '../../assets/ex11.jpeg';
+import ex12 from '../../assets/ex12.jpeg';
+import ex13 from '../../assets/ex13.jpeg';
+import ex14 from '../../assets/ex14.jpeg';
+import ex15 from '../../assets/ex15.jpeg';
+import ex16 from '../../assets/ex16.jpeg';
+import ex17 from '../../assets/ex17.jpeg';
+
 
 // Imágenes de prueba desde Picsum
 const placeholderImages = [
-  'https://picsum.photos/seed/electric1/1200/800',
-  'https://picsum.photos/seed/electric2/1200/800',
-  'https://picsum.photos/seed/electric3/1200/800',
-  'https://picsum.photos/seed/electric4/1200/800',
-  'https://picsum.photos/seed/electric5/1200/800',
-  'https://picsum.photos/seed/electric6/1200/800',
+  ex1,
+  ex2,
+  ex3,
+  ex4,
+  ex5,
+  ex6,
+  ex7,
+  ex8,
+  ex9,
+  ex10,
+  ex11,
+  ex12,
+  ex13,
+  ex14,
+  ex15,
+  ex16,
+  ex17
 ];
 
 export default function ProjectAtmt() {
@@ -143,7 +172,19 @@ export default function ProjectAtmt() {
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
-        <div className="relative mb-4">
+        {/* Botón Ver todas las fotos */}
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={() => openGallery(0)}
+            className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 font-medium rounded-lg shadow-sm transition-all duration-200 hover:shadow-md"
+          >
+            <Images size={20} />
+            Ver todas las fotos ({projectData.gallery.length})
+          </button>
+        </div>
+
+        {/* Hero Section */}
+        <div className="mb-8">
           <ProjectHero
             title={projectData.title}
             description={projectData.description}
@@ -153,17 +194,7 @@ export default function ProjectAtmt() {
           />
         </div>
 
-        {/* Botón Ver todas las fotos */}
-        <div className="flex justify-end -mt-16 mb-8 px-4 relative z-50">
-          <button
-            onClick={() => openGallery(0)}
-            className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white backdrop-blur-sm text-gray-800 font-medium rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
-          >
-            <Images size={20} />
-            Ver todas las fotos ({projectData.gallery.length})
-          </button>
-        </div>
-
+        {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
           <div className="lg:col-span-2">
             <ProjectChallenge challenges={projectData.challenges} />
@@ -172,7 +203,7 @@ export default function ProjectAtmt() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="lg:sticky lg:top-8">
+            <div>
               <ProjectSidebar
                 location={projectData.sidebar.location}
                 technology={projectData.sidebar.technology}
@@ -185,69 +216,127 @@ export default function ProjectAtmt() {
         </div>
       </div>
 
-      {/* Modal de Galería */}
+      {/* Modal de Galería - Responsive Desktop y Mobile */}
       {isGalleryOpen && (
         <div 
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
           onClick={(e) => {
             if (e.target === e.currentTarget) setIsGalleryOpen(false);
           }}
         >
-          <button
-            onClick={() => setIsGalleryOpen(false)}
-            className="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-full transition-colors z-10"
-            aria-label="Cerrar galería"
-          >
-            <X size={32} />
-          </button>
+          {/* Contenedor del modal */}
+          <div className="relative bg-gray-100 rounded-lg shadow-2xl w-full max-w-5xl overflow-hidden">
+            
+            {/* Botón cerrar */}
+            <button
+              onClick={() => setIsGalleryOpen(false)}
+              className="absolute top-3 right-3 p-1.5 text-gray-700 hover:text-gray-900 bg-white hover:bg-gray-50 rounded-md transition-colors z-20 shadow-sm"
+              aria-label="Cerrar galería"
+            >
+              <X size={20} />
+            </button>
 
-          <div className="absolute top-4 left-4 text-white text-lg font-medium z-10 bg-black/30 px-4 py-2 rounded-lg backdrop-blur-sm">
-            {currentImageIndex + 1} / {projectData.gallery.length}
-          </div>
+            {/* Layout Desktop: Grid 3 columnas | Mobile: Stack vertical */}
+            <div className="md:grid md:grid-cols-3 md:gap-3 p-4 flex flex-col">
+              
+              {/* Imagen principal */}
+              <div className="md:col-span-2 bg-white rounded-lg relative flex items-center justify-center aspect-[4/3]">
+                
+                {/* Botón anterior */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-3 p-1.5 text-gray-700 hover:text-gray-900 transition-colors z-10"
+                  aria-label="Imagen anterior"
+                >
+                  <ChevronLeft size={24} />
+                </button>
 
-          <button
-            onClick={prevImage}
-            className="absolute left-4 p-3 text-white hover:bg-white/10 rounded-full transition-all hover:scale-110 z-10"
-            aria-label="Imagen anterior"
-          >
-            <ChevronLeft size={40} />
-          </button>
-
-          <div className="max-w-7xl max-h-[90vh] mx-auto px-20">
-            <img
-              key={currentImageIndex}
-              src={projectData.gallery[currentImageIndex]}
-              alt={`Foto ${currentImageIndex + 1} del proyecto`}
-              className="w-full h-full object-contain"
-            />
-          </div>
-
-          <button
-            onClick={nextImage}
-            className="absolute right-4 p-3 text-white hover:bg-white/10 rounded-full transition-all hover:scale-110 z-10"
-            aria-label="Imagen siguiente"
-          >
-            <ChevronRight size={40} />
-          </button>
-
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 overflow-x-auto max-w-4xl px-4">
-            {projectData.gallery.map((img, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentImageIndex(index)}
-                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                  index === currentImageIndex
-                    ? 'border-white scale-110 shadow-lg'
-                    : 'border-transparent opacity-60 hover:opacity-100 hover:scale-105'
-                }`}
-              >
+                {/* Imagen */}
                 <img
-                  src={img}
-                  alt={`Miniatura ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  key={currentImageIndex}
+                  src={projectData.gallery[currentImageIndex]}
+                  alt={`Foto ${currentImageIndex + 1} del proyecto`}
+                  className="max-w-full max-h-full object-contain p-4"
                 />
-              </button>
-            ))}
+
+                {/* Botón siguiente */}
+                <button
+                  onClick={nextImage}
+                  className="absolute right-3 p-1.5 text-gray-700 hover:text-gray-900 transition-colors z-10"
+                  aria-label="Imagen siguiente"
+                >
+                  <ChevronRight size={24} />
+                </button>
+
+                {/* Contador centrado abajo */}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gray-800/70 text-white text-xs rounded-full">
+                  {currentImageIndex + 1}/{projectData.gallery.length}
+                </div>
+              </div>
+
+              {/* Miniaturas Desktop: Columna vertical | Mobile: Fila horizontal */}
+              <div className="md:col-span-1 mt-3 md:mt-0">
+                {/* Desktop: Columna vertical scrolleable */}
+                <div className="hidden md:block space-y-3 overflow-y-auto max-h-[500px] pr-1">
+                  {projectData.gallery.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-full aspect-[4/3] rounded-lg overflow-hidden transition-all ${
+                        index === currentImageIndex
+                          ? 'ring-2 ring-blue-500'
+                          : 'opacity-60 hover:opacity-100'
+                      }`}
+                    >
+                      <img
+                        src={img}
+                        alt={`Miniatura ${index + 1}`}
+                        className="w-full h-full object-cover bg-white"
+                      />
+                    </button>
+                  ))}
+                </div>
+
+                {/* Mobile: Fila horizontal scrolleable (solo 3 visibles) */}
+                <div className="md:hidden flex gap-3 overflow-x-auto pb-2">
+                  {projectData.gallery.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden transition-all ${
+                        index === currentImageIndex
+                          ? 'ring-2 ring-blue-500'
+                          : 'opacity-60'
+                      }`}
+                    >
+                      <img
+                        src={img}
+                        alt={`Miniatura ${index + 1}`}
+                        className="w-full h-full object-cover bg-white"
+                      />
+                    </button>
+                  ))}
+                </div>
+
+                {/* Indicadores de puntos en mobile */}
+                <div className="md:hidden flex justify-center gap-1.5 mt-2">
+                  {projectData.gallery.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentImageIndex
+                          ? 'bg-blue-500 w-4'
+                          : 'bg-gray-400'
+                      }`}
+                      aria-label={`Ir a imagen ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       )}
