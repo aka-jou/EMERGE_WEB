@@ -3,7 +3,11 @@ import { Award, Cpu, Users, Globe, Target, Eye, Heart } from "lucide-react";
 import mantte from "../../assets/mantte.jpeg";
 import { Link } from "react-router-dom";
 
+
+
 export default function AboutSection() {
+
+
 
 
   return (
@@ -24,6 +28,8 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
+
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -38,7 +44,25 @@ export default function AboutSection() {
                 alt="Mantenimiento Eólico"
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
+              
+              {/* Overlay con texto */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Texto centrado sobre la imagen */}
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="text-white text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] tracking-wide whitespace-nowrap"
+                >
+                  Gestión inteligente
+                </motion.h3>
+              </div>
             </div>
+
+
 
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
@@ -51,6 +75,8 @@ export default function AboutSection() {
               <div className="text-[#525252] text-xs font-medium">Clientes Satisfechos</div>
             </motion.div>
 
+
+
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -62,6 +88,8 @@ export default function AboutSection() {
               <div className="text-[#525252] text-xs font-medium">Índice de Éxito</div>
             </motion.div>
           </motion.div>
+
+
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <Card
@@ -91,6 +119,8 @@ export default function AboutSection() {
           </div>
         </div>
 
+
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,12 +129,14 @@ export default function AboutSection() {
           className="bg-white rounded-xl shadow-sm border border-gray-100 py-6 px-4 mb-12"
         >
           <div className="flex flex-wrap justify-between gap-6 md:gap-4 text-center md:text-left">
-            <MiniBadge icon={<Award className="w-5 h-5 text-[#005900]" />} text="(SGI)" />
+            <MiniBadge icon={<Award className="w-5 h-5 text-[#005900]" />} text="SGI" />
             <MiniBadge icon={<Cpu className="w-5 h-5 text-[#005900]" />} text="Tecnología de Vanguardia" />
             <MiniBadge icon={<Users className="w-5 h-5 text-[#005900]" />} text="Equipo Multidisciplinario" />
             <MiniBadge icon={<Globe className="w-5 h-5 text-[#005900]" />} text="Cobertura Internacional" />
           </div>
         </motion.div>
+
+
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -125,6 +157,8 @@ export default function AboutSection() {
   );
 }
 
+
+
 function MiniBadge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div className="flex items-center gap-3 mx-auto md:mx-0">
@@ -133,6 +167,8 @@ function MiniBadge({ icon, text }: { icon: React.ReactNode; text: string }) {
     </div>
   );
 }
+
+
 
 function Card({
   icon,

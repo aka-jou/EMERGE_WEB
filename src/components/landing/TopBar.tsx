@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin} from "lucide-react";
 
+
 export default function TopBar() {
   return (
     <div className="bg-[#005900] text-white py-2">
@@ -14,11 +15,12 @@ export default function TopBar() {
               <Mail className="w-3.5 h-3.5" />
               <span>antonio.ruiz@grupoemerge.com.mx</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5" />
               <span>Mexicali Baja California</span>
             </div>
           </div>
+
 
         </div>
       </div>

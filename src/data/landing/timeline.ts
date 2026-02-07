@@ -32,7 +32,7 @@ export const TIMELINE: TrajectoryItem[] = [
     badge: "",
     title: "Aprendizaje",
     description:
-      "Operación y mantenimiento en tecnologías inteligentes, Gamesa, Eco-100, Acciona, Envision, Clipper y Vestas.",
+      "Operación y mantenimiento en tecnologías, Gamesa, Eco-100, Acciona, Envision, Clipper y Vestas.",
     icon: Sprout,
     color: "bg-gray-50",
     textColor: "text-gray-700",
@@ -44,6 +44,6 @@ export const TIMELINE: TrajectoryItem[] = [
 
 export const STATS: StatItem[] = [
   { value: "3.3 GW", label: "Potencia Gestionada", icon: Zap },
-  { value: "+535", label: "Aerogeneradores", icon: TrendingUp },
+  { value: "+1535", label: "Aerogeneradores", icon: TrendingUp },
   { value: "44%", label: "Del mercado actual", icon: Users },
 ];
