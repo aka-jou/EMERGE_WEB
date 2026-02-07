@@ -128,12 +128,13 @@ export default function AboutSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="bg-white rounded-xl shadow-sm border border-gray-100 py-6 px-4 mb-12"
         >
-          <div className="flex flex-wrap justify-between gap-6 md:gap-4 text-center md:text-left">
-            <MiniBadge icon={<Award className="w-5 h-5 text-[#005900]" />} text="SGI" />
-            <MiniBadge icon={<Cpu className="w-5 h-5 text-[#005900]" />} text="Tecnología de Vanguardia" />
-            <MiniBadge icon={<Users className="w-5 h-5 text-[#005900]" />} text="Equipo Multidisciplinario" />
-            <MiniBadge icon={<Globe className="w-5 h-5 text-[#005900]" />} text="Cobertura Internacional" />
-          </div>
+          <div className="flex flex-col md:flex-row md:flex-wrap justify-between gap-6 md:gap-4 text-center md:text-left">
+  <MiniBadge icon={<Award className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="SGI" />
+  <MiniBadge icon={<Cpu className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="Tecnología de Vanguardia" />
+  <MiniBadge icon={<Users className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="Equipo Multidisciplinario" />
+  <MiniBadge icon={<Globe className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="Cobertura Internacional" />
+</div>
+
         </motion.div>
 
 
