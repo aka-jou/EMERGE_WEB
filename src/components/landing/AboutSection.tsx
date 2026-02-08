@@ -4,14 +4,12 @@ import mantte from "../../assets/mantte.jpeg";
 import { Link } from "react-router-dom";
 
 
-
 export default function AboutSection() {
-
-
-
-
   return (
-    <section id="nosotros" className="py-16 md:py-24 bg-[#fcfcfc] overflow-hidden">
+    <section
+      id="nosotros"
+      className="py-16 md:py-24 bg-[#fcfcfc] overflow-hidden"
+    >
       <div className="container mx-auto px-4 md:px-8 lg:px-20 max-w-[1200px]">
         <motion.div
           initial="hidden"
@@ -19,15 +17,19 @@ export default function AboutSection() {
           viewport={{ once: true, amount: 0.5 }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#005900]">¿Quiénes Somos?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#005900]">
+            ¿Quiénes Somos?
+          </h2>
           <div className="max-w-3xl mx-auto space-y-2">
-            <p className="text-xl text-[#404040]">Nuestra principal línea de acción implícito en nuestro nombre:</p>
+            <p className="text-xl text-[#404040]">
+              Nuestra principal línea de acción implícito en nuestro nombre:
+            </p>
             <p className="text-xl text-[#404040] font-medium">
-              Especialistas Mexicanos en Energía Renovables y Generadores Eléctricos
+              Especialistas Mexicanos en Energía Renovables y Generadores
+              Eléctricos
             </p>
           </div>
         </motion.div>
-
 
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
@@ -44,10 +46,12 @@ export default function AboutSection() {
                 alt="Mantenimiento Eólico"
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
-              
+
+
               {/* Overlay con texto */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
+
               {/* Texto centrado sobre la imagen */}
               <div className="absolute inset-0 flex items-center justify-center z-10">
                 <motion.h3
@@ -63,7 +67,6 @@ export default function AboutSection() {
             </div>
 
 
-
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -72,9 +75,10 @@ export default function AboutSection() {
               className="absolute top-2 right-0 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 rounded-xl z-20 w-40"
             >
               <div className="text-[#005900] text-3xl font-bold">18+</div>
-              <div className="text-[#525252] text-xs font-medium">Clientes Satisfechos</div>
+              <div className="text-[#525252] text-xs font-medium">
+                Clientes Satisfechos
+              </div>
             </motion.div>
-
 
 
             <motion.div
@@ -85,10 +89,11 @@ export default function AboutSection() {
               className="absolute bottom-2 left-0 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 rounded-xl z-20 w-40"
             >
               <div className="text-[#005900] text-3xl font-bold">98%</div>
-              <div className="text-[#525252] text-xs font-medium">Índice de Éxito</div>
+              <div className="text-[#525252] text-xs font-medium">
+                Índice de Éxito
+              </div>
             </motion.div>
           </motion.div>
-
 
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -120,7 +125,6 @@ export default function AboutSection() {
         </div>
 
 
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,14 +133,25 @@ export default function AboutSection() {
           className="bg-white rounded-xl shadow-sm border border-gray-100 py-6 px-4 mb-12"
         >
           <div className="flex flex-col md:flex-row md:flex-wrap justify-between gap-6 md:gap-4 text-center md:text-left">
-  <MiniBadge icon={<Award className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="SGI" />
-  <MiniBadge icon={<Cpu className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="Tecnología de Vanguardia" />
-  <MiniBadge icon={<Users className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="Equipo Multidisciplinario" />
-  <MiniBadge icon={<Globe className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />} text="Cobertura Internacional" />
-</div>
-
+            <MiniBadge
+              icon={<Globe className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />}
+              text="Cobertura Internacional"
+            />
+            <MiniBadge
+              icon={<Cpu className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />}
+              text="Tecnología de Vanguardia"
+            />
+            <MiniBadge
+              icon={<Users className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />}
+              text="Equipo Multidisciplinario"
+            />
+            
+            <MiniBadge
+              icon={<Award className="w-8 h-8 md:w-5 md:h-5 text-[#005900]" />}
+              text="SGI"
+            />
+          </div>
         </motion.div>
-
 
 
         <motion.div
@@ -159,15 +174,18 @@ export default function AboutSection() {
 }
 
 
-
 function MiniBadge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <div className="flex items-center gap-3 mx-auto md:mx-0">
+    <div className="flex items-center gap-3 justify-center md:justify-start mx-auto md:mx-0">
       {icon}
-      <span className="text-sm font-medium text-[#404040]">{text}</span>
+      <span className="text-sm font-medium text-[#404040] whitespace-nowrap inline-block min-w-[220px] md:min-w-0 text-left md:text-left">
+        {text}
+      </span>
     </div>
   );
 }
+
+
 
 
 
