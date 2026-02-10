@@ -32,7 +32,7 @@ export const products: Product[] = [
     category: "INVERSORES",
     image: panell,
     detailImage: panell,
-    price: "$1,245.00",
+    price: null,
     sku: "VIC-MP2432",
     features: [
       { icon: "zap", text: "/ 24V DC", highlight: "3000W" },
@@ -51,7 +51,7 @@ export const products: Product[] = [
     category: "BATERÍAS",
     image: batery,
     detailImage: batery,
-    price: "$899.00",
+    price: null,
     sku: "PYL-US3000C",
     features: [
       { icon: "battery", text: "/ 48V nominal", highlight: "3.5kWh" },
