@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Search, X } from "lucide-react";
-
 import jama from "../../../assets/jama.png";
-
 import oaxacaim from "../../../assets/oaxacaim.png";
 import bajacalifa from "../../../assets/bajacalifa.png";
 import cuba from "../../../assets/cuba.png";
@@ -11,8 +9,8 @@ import merida from "../../../assets/merida.png";
 import oaxxx from "../../../assets/oaxxx.png";
 import republica from "../../../assets/republica.png";
 import oaxx from "../../../assets/oaxx.png";
+import torrez from "../../../assets/torrez.png";
 import CaseCard from "./CaseCard";
-
 
 export const CASES = [
   {
@@ -55,7 +53,6 @@ export const CASES = [
     tags: ["Profesionalismo", "Calidad", "Servicio"],
     image: cuba,
   },
-  // --- LOS 5 NUEVOS CASOS AGREGADOS ---
   {
     id: "5",
     title: "Asistencia Técnica Especializada G8X Chiapas, México",
@@ -106,12 +103,21 @@ export const CASES = [
     tags: ["Profesionalismo", "Calidad", "Servicio"],
     image: oaxxx,
   },
+  {
+    id: "10",
+    title: "Asistencia Técnica a Torres Meteorológicas, servicio Especializado",
+    type: "E&S",
+    date: "15 Ene 2025",
+    location: "Oaxaca",
+    duration: "1 Años",
+    tags: ["Profesionalismo", "Calidad", "Servicio"],
+    image: torrez,
+  },
 ];
 
 export default function SuccessStoriesSection() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Función de filtrado
   const filterCases = () => {
     if (!searchTerm || searchTerm.trim() === '') {
       return CASES;
@@ -151,7 +157,6 @@ export default function SuccessStoriesSection() {
           </p>
         </div>
 
-        {/* Barra de búsqueda */}
         <div className="mb-8 max-w-2xl mx-auto">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -174,7 +179,6 @@ export default function SuccessStoriesSection() {
           </div>
         </div>
 
-        {/* Contador de resultados */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <p className="text-[#525252] text-sm font-medium">
             {searchTerm ? (
@@ -197,7 +201,6 @@ export default function SuccessStoriesSection() {
           )}
         </div>
 
-        {/* Grid de casos */}
         {filteredCases.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
             {filteredCases.map((item) => (
@@ -205,7 +208,6 @@ export default function SuccessStoriesSection() {
             ))}
           </div>
         ) : (
-          // Estado vacío
           <div className="text-center py-20">
             <div className="w-20 h-20 mx-auto mb-6 bg-gray-200 rounded-full flex items-center justify-center">
               <Search className="w-10 h-10 text-gray-400" />

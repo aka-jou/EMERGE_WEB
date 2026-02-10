@@ -5,6 +5,7 @@ import client2 from "../../assets/client2.png";
 import client3 from "../../assets/client3.png";
 import ineel from "../../assets/ineel.png";
 import { Link } from "react-router-dom";
+import subesss from "../../assets/subesss.jpeg";
 
 
 function ClientCard({ title, count, description, image, highlight = false }: ClientCardProps) {
@@ -53,7 +54,7 @@ export default function ClientsSection() {
             title="Propietarios de Plantas Eólicas"
             count="4 clientes en 2024"
             description="Nuestro firme conocimiento de la tecnología instalada y el medio ambiente en los parques eólicos de México nos permite ser un socio confiable para la operación segura de sus activos."
-            image={client1}
+            image={subesss}
           />
 
           <ClientCard

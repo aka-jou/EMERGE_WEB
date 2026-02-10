@@ -9,6 +9,8 @@ import ColaboradoresPage from './pages/socios/CollaboratorsPage';
 import ScrollToTop from './components/ScrollToTop'; 
 import Store from './pages/store/Store';
 import ProjectAtmt from './pages/projectDetail/ProjectAtmt';
+import ProjectTorrez from './pages/projectDetail/ProjectTorrez';
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
             <Route path="/colaboradores" element={<ColaboradoresPage />} />
             <Route path="/store" element={<Store />} />
             <Route path="/project-detail/9" element={<ProjectAtmt />} />
+            <Route path="/project-detail/10" element={<ProjectTorrez />} />
 
             <Route path="*" element={<div className="p-10 text-center">404 - Página no encontrada</div>} />
           </Routes>

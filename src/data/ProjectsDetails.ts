@@ -14,6 +14,7 @@ export interface ProjectDetail {
   publishDate: string;
   author: string;
   image: any;
+  images?: string[]; 
   gallery?: string[];
   sidebar: {
     location: string;
@@ -526,7 +527,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
         title: "Localización de Fallas en Redes Subterráneas de MT",
         description: "Detección de fallas en circuitos Eléctricos de Media Tensión (hasta 35 KV). Identificación de Cables de AT y MT. Excavación en Punto de Localización de fallas. Instalación de empalmes, terminales de Empalmes termoplásticas o en frío. Corte y empalmes de cables. Localización de fallas (Muy-Low-frecuency). Evaluación de la degradación Tensión de Descarga de armadura disruptiva. Delta o Línea de Media tensión.",
         icon: "wind"
-      }
+      },
     ],
     benefits: [
       "Mayor disponibilidad operativa del sistema eléctrico con reducción significativa de paros no planificados",
@@ -534,7 +535,7 @@ export const PROJECTS_DETAILS: Record<string, ProjectDetail> = {
       "Reducción de tiempos muertos gracias a refacciones entregadas y montadas oportunamente",
       "Extensión de la vida útil de palas y componentes de nacelle mediante mantenimiento preventivo",
       "Optimización del rendimiento energético y retorno de inversión del sistema eléctrico"
-    ]
+    ],
   }
 };
 
